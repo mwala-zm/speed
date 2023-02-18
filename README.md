@@ -4,12 +4,13 @@ Do the speedy thing 😮‍💨
 
 ## Getting Started
 Let's get started...
-cd to the cloned repo and follow the steps below:
+Follow the steps below:
 
 1. ```shell
    git clone https://github.com/mwala-zm/speed.git
    ```
-   Open virtual environment.
+   cd to the cloned repo
+   Open virtual environment using the command below.
 2. ```shell
     pipenv shell
     ```
