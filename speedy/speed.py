@@ -34,7 +34,8 @@ print("")
 
 # divider - a line in the screen with a fixed width
 print(Fore.MAGENTA + "="*80)
-print(Fore.GREEN + "INTERNET SPEED TEST RESULTS:".center(80))
+print(Fore.GREEN + "========SPEED 😮‍💨========".center(80))
+print("Your Internet Speed Results")
 print(Fore.MAGENTA + "="*80)
 print(Fore.YELLOW +
       f"Download: {dwnl}mbps({float(dwnl)*0.125:.2f}MBs) | Upload:{upl}mbps ({float(upl)*0.125:.2f}MBs) | Ping: {res_dict['ping']:.2f}ms".center(80))
