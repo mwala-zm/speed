@@ -1,0 +1,44 @@
+import speedtest
+from time import sleep
+from tqdm import tqdm
+from colorama import Fore, init
+
+init(autoreset=True)
+
+print(Fore.LIGHTMAGENTA_EX + "SEARCHING FOR BEST AVAILABLE SERVER......")
+
+speed = speedtest.Speedtest()
+
+speed.get_best_server()
+for i in tqdm(range(10), colour="green", desc="Finding Optimal Speed"):
+    sleep(0.05)
+
+speed.download()
+for i in tqdm(range(10), colour="cyan", desc="Download Speed"):
+    sleep(0.05)
+
+speed.upload()
+for i in tqdm(range(10), colour="blue", desc="Upload Speed"):
+    sleep(0.05)
+
+res_dict = speed.results.dict()
+
+# Assign to variables with a specific format
+dwnl = str(res_dict['download'])[:2] + "." + \
+    str(res_dict['download'])[2:4]
+
+upl = str(res_dict['upload'])[:2] + "." + str(res_dict['upload'])[2:4]
+
+# Display results in a nice looking table using colorama features
+print("")
+
+# divider - a line in the screen with a fixed width
+print(Fore.MAGENTA + "="*80)
+print(Fore.GREEN + "INTERNET SPEED TEST RESULTS:".center(80))
+print(Fore.MAGENTA + "="*80)
+print(Fore.YELLOW +
+      f"Download: {dwnl}mbps({float(dwnl)*0.125:.2f}MBs) | Upload:{upl}mbps ({float(upl)*0.125:.2f}MBs) | Ping: {res_dict['ping']:.2f}ms".center(80))
+print(Fore.MAGENTA + "-"*80)
+print(Fore.CYAN +
+      f"HOST:{res_dict['server']['host']} | SPONSOR:{res_dict['server']['sponsor']} | LATENCY: {res_dict['server']['latency']:.2f}".center(80))
+print(Fore.MAGENTA + "-"*80)
