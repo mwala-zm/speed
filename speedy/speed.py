@@ -1,3 +1,7 @@
+"""
+The speed module uses speedtest and tqdm to generate internet speed test for your network.
+"""
+
 import speedtest
 from time import sleep
 from tqdm import tqdm
