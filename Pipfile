@@ -8,6 +8,7 @@ tqdm = "*"
 colorama = "*"
 speedtest-cli = "*"
 black = "*"
+pyinstaller = "*"
 
 [dev-packages]
 
