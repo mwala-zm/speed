@@ -9,6 +9,7 @@ colorama = "*"
 speedtest-cli = "*"
 black = "*"
 pyinstaller = "*"
+flask = "*"
 
 [dev-packages]
 

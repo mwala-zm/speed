@@ -19,7 +19,7 @@ Follow the steps below:
     pipenv install
     ```
    To run the app.
-4. ```shell 
-    python main.py
+4. ```shell
+    python app.py
     ```
 Have fun
