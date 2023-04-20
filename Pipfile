@@ -10,6 +10,7 @@ speedtest-cli = "*"
 black = "*"
 pyinstaller = "*"
 flask = "*"
+dill = "*"
 
 [dev-packages]
 

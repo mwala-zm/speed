@@ -57,3 +57,4 @@ def speedTry():
         print(
             f"oh oh 🫣, It seems we are unable to conncet to a server\nTry checking your internet connection or try again later."
         )
+
